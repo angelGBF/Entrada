@@ -1,0 +1,282 @@
+* {
+  color: inherit;
+  border: none;
+}
+
+html {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+.body {
+  margin: 0;
+  padding: 0;
+}
+
+.section_two {
+  grid-column: 1 / span -1;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  background-image: url('/img/Fondo.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 150%;
+  height: 98vh;
+  animation: movimiento 30s infinite linear alternate;
+  -webkit-animation: movimiento 30s infinite linear alternate;
+}
+
+
+@keyframes movimiento{
+  from{
+    background-position: bottom left;
+  }to{
+    background-position: top right;
+  }
+}
+
+.foto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 93vh;
+  border-right: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.texto_uno{
+    font: normal 700 3rem 'Raleway', sans-serif;
+    color: #050505;
+    text-align: center;
+    text-shadow: 5px 5px 10px #ffffff;
+}
+
+.cuadro {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  width: 80%;
+  height: 93vh;
+  background-color: rgba(240, 248, 255, 0.3);
+  margin: 20px;
+  border-radius: 8px;
+  z-index: 1;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.contenedor_logo{
+  display: flex;
+  border-top-right-radius: 8px;
+  background-color: rgba(246, 250, 249, 0.3); 
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+}
+
+.logo_solar{
+  width: 40vh;
+}
+
+.datos {
+  width: 100%;
+}
+
+.contenedor_texto{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 70vh;
+}
+
+.texto_dos{
+  display: flex;
+  font: normal 500 1.4rem 'Raleway', sans-serif;
+  text-align: justify;
+  padding-top: 2%;
+  padding-right: 5%;
+  padding-bottom: 2%;
+  padding-left: 5%;
+  margin: 0;
+  margin-top: 0.5em;
+
+}
+
+.texto_tres{
+  display: flex;
+  font: normal 700 1.6rem 'Raleway', sans-serif;
+  justify-content: center;
+  padding-right: 5%;
+  padding-bottom: 0%;
+  padding-left: 5%;
+  margin: 0;
+  margin-bottom: 0.2em;
+}
+
+.texto_cuatro{
+  display: flex;
+  font: normal 500 1.6rem 'Raleway', sans-serif;
+  justify-content: center;
+  padding-right: 5%;
+  padding-bottom: 2%;
+  padding-left: 5%;
+  margin: 0;
+
+}
+
+.texto_cinco{
+  display: flex;
+  font: normal 700 1.6rem 'Raleway', sans-serif;
+  justify-content: center;
+  padding-right: 5%;
+  padding-bottom: 2%;
+  padding-left: 5%;
+  margin: 0;
+}
+
+/* -----------------------------------------Responsive--------------------------------------------------*/
+
+
+
+
+
+
+@media only screen and (max-width: 1300px) and (orientation: landscape) {
+  /* Estilos para dispositivos en orientación horizontal */
+
+  .cuadro {
+      width: 95%;
+      height: 88vh;
+  }
+
+  .logo_solar{
+    width: 45vh;
+  }
+
+  .contenedor_texto{
+    height: 59vh;
+  }
+
+  .texto_dos{
+    display: flex;
+    font: normal 500 0.9rem 'Raleway', sans-serif;
+    text-align: justify;
+  }
+  .contenedor_email{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(246, 250, 249, 0);
+
+    height: 35%;
+  } 
+
+  .texto_tres{
+    font: normal 700 0.8rem 'Raleway', sans-serif;
+  }
+  .texto_cuatro{
+    font: normal 700 0.7rem 'Raleway', sans-serif;
+    padding-bottom: 0%;
+  }
+  .texto_cinco{
+    font: normal 700 0.7rem 'Raleway', sans-serif;
+  }
+
+}
+
+
+/* ----------------------------------------------------------------------*/
+
+@media only screen and (max-width: 1200px) and (orientation: portrait) {
+  /* Estilos para dispositivos móviles en orientación vertical */
+
+.section_two {
+  grid-template-columns: 1fr;
+  background-size: 300%;
+  animation: movimiento 50s infinite linear alternate;
+  -webkit-animation: movimiento 50s infinite linear alternate;
+}
+
+
+@keyframes movimiento{
+  from{
+    background-position: bottom left;
+  }to{
+    background-position: top right;
+  }
+}
+
+.foto {
+  display: flex;
+  height: 93vh;
+  border-right: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.texto_uno{
+    font: normal 700 2.5rem 'Raleway', sans-serif;
+    color: #050505;
+    text-align: center;
+    text-shadow: 5px 5px 10px #ffffff;
+}
+
+.cuadro {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  height: 96vh;
+  background-color: rgba(240, 248, 255, 0.2);
+  margin: 10px;
+  border-radius: 2px;
+  z-index: 1;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+
+.contenedor_logo{
+  display: flex;
+  border-top-right-radius: 8px;
+  background-color: rgba(246, 250, 249, 0); 
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+}
+
+.logo_solar{
+  width: 38vh;
+}
+
+.contenedor_texto{
+  background-color: rgba(246, 250, 249, 0.1); 
+  height: 48vh;
+}
+
+.texto_dos{
+  display: flex;
+  font: normal 500 1rem 'Raleway', sans-serif;
+  text-align: justify;
+}
+
+.contenedor_email{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(246, 250, 249, 0.5);
+  height: 50%;
+}
+.texto_cuatro{
+  display: flex;
+  font: normal 700 1rem 'Raleway', sans-serif;
+  justify-content: center;
+}
+
+.texto_cinco{
+  display: flex;
+  font: normal 700 1rem 'Raleway', sans-serif;
+  justify-content: center;
+
+}
+
+}
